@@ -1,5 +1,8 @@
 # Data Attribution for Diffusion Models: Timestep-induced Bias in Influence Estimation
 
+[![arXiv](https://img.shields.io/badge/arXiv-2401.09031-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2401.09031)
+
+
 This is the official implementation of "_Data Attribution for Diffusion Models: Timestep-induced Bias in Influence Estimation_" (TMLR 2024)
 
 [[Paper]](https://arxiv.org/abs/2401.09031)  [[OpenReview]](https://openreview.net/forum?id=P3Lyun7CZs)
