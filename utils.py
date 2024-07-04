@@ -18,35 +18,12 @@ def set_seed(seed):
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
-
-# def plot_losses(losses, out_dir):
-#     os.makedirs(out_dir, exist_ok=True)
-#     plt.plot(losses, label='train')
-#     plt.legend()
-#     plt.savefig(f"{out_dir}/losses.png")
-#     plt.clf()
-
 def plot_losses(losses, epoch, out_dir):
     os.makedirs(out_dir, exist_ok=True)
     plt.plot(losses, label='train')
     plt.legend()
     plt.savefig(f"{out_dir}/{epoch}.png")
     plt.clf()
-
-# def save_images(generated_images, epoch, args):
-#     images = generated_images["sample"]
-#     images_processed = (images * 255).round().astype("uint8")
-    
-#     current_date = datetime.today().strftime('%Y%m%d_%H%M%S')
-#     out_dir = f"./{args.samples_dir}/{current_date}_{args.dataset_name}_{epoch}/"
-#     os.makedirs(out_dir)
-#     for idx, image in enumerate(images_processed):
-#         image = Image.fromarray(image)
-#         image.save(f"{out_dir}/{epoch}_{idx}.jpeg")
-
-#     utils.save_image(generated_images["sample_pt"],
-#                         f"{out_dir}/{epoch}_grid.jpeg",
-#                         nrow=args.eval_batch_size // 4)
 
 def save_images(generated_images, epoch, args):
     images = generated_images["sample"]
@@ -58,14 +35,11 @@ def save_images(generated_images, epoch, args):
                         f"{args.samples_dir}/{epoch}_grid.jpeg",
                         nrow=args.eval_batch_size // 4)
 
-
 def normalize_to_neg_one_to_one(img):
     return img * 2 - 1
 
-
 def unnormalize_to_zero_to_one(t):
     return (t + 1) * 0.5
-
 
 def numpy_to_pil(images):
     if images.ndim == 3:
