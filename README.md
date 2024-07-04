@@ -4,6 +4,8 @@ This is the official implementation of "_Data Attribution for Diffusion Models: 
 
 [[Paper]](https://arxiv.org/abs/2401.09031)  [[OpenReview]](https://openreview.net/forum?id=P3Lyun7CZs)
 
+Tong Xie*, Haoyu Li*, Andrew Bai, Cho-Jui Hsieh
+
 ---
 
 <!-- TABLE OF CONTENTS -->
@@ -14,6 +16,8 @@ This is the official implementation of "_Data Attribution for Diffusion Models: 
       <a href="#tldr">TL;DR</a>
     <li>
       <a href="#requirements">Requirements</a>
+    <li>
+      <a href="#usage">Usage</a>
   <ol>
 </details>
 
@@ -29,6 +33,12 @@ and arbitrariness in attribution results. We identify the **dominating norm effe
 influential samples to be the same across diverse test images (ie. generally influential). To address this,
 we present diffusion-ReTrac with re-normalization technique to provide fair and targeted attribution.
 
+<img src = “assets/tiny_imagenet.png” width = 600 height = 300>
 
 <a name="requirements"></a>
 ### Requirements
+
+
+<a name="usage"></a>
+### Usage
+
