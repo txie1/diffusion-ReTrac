@@ -1,3 +1,6 @@
+<a name="readme-top"></a>
+
+
 # Data Attribution for Diffusion Models: Timestep-induced Bias in Influence Estimation
 
 [![arXiv](https://img.shields.io/badge/arXiv-2401.09031-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2401.09031)
@@ -18,9 +21,11 @@ Tong Xie*, Haoyu Li*, Andrew Bai, Cho-Jui Hsieh
     <li>
       <a href="#tldr">TL;DR</a>
     <li>
-      <a href="#requirements">Requirements</a>
+      <a href="#requirements">Setup</a>
     <li>
       <a href="#usage">Usage</a>
+    <li>
+      <a href="#citation">Citation</a>
   <ol>
 </details>
 
@@ -75,7 +80,11 @@ The `generate.py` file provides code to generate images from trained model check
 ```bash
 python3 generate.py --gpu=0 --samples_dir="test_samples/gen" --resolution=128 --pretrained_model_path="path_to_ckpt" --eval_batch_size=32
 ```
+
+
 ---
+
+<a name="citation"></a>
 
 ## Citation
 If you find this project useful, please consider citing our paper:
@@ -92,3 +101,6 @@ If you find this project useful, please consider citing our paper:
 }
 ```
 
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
