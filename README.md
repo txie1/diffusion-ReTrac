@@ -51,7 +51,9 @@ pip install requirments.txt
 
 **1. Model Training** 
 
-To train a diffusion model (and checkpoint the timesteps and noise for attribution), please see `train.py`.  For example, to train on the CIFAR-MNIST dataset, run the following:
+The `train.py` file provides code to train a diffusion model on customized datasets (and save training timesteps / noise into checkpoints for attribution) 
+
+For example, to train on the CIFAR-MNIST dataset, run the following:
 
 ```bash
 python3 train.py --gpu=0 --dataset='cifar_mnist' --learning_rate=0.0001 --num_epochs=500 --save_model_epoch=50 --train_batch_size=32 --resolution=32 --output_dir='trained_models/cifar_mnist' --samples_dir='trained_outputs/cifar_mnist' --loss_logs_dir="training_logs/cifar_mnist"
@@ -59,11 +61,17 @@ python3 train.py --gpu=0 --dataset='cifar_mnist' --learning_rate=0.0001 --num_ep
 
 **2. Diffusion-TracIn / ReTrac**
 
-The `main.py` file provides code to run Diffusion-TracIn / ReTrac, where the parameter `--retrac` controls whether ReTrac or TracIn is performed. The implementations are located in `diffusion_tracin.py` For example, to run ReTrac on TinyImagenet, run the following:
-```base
+The `main.py` file provides code to run Diffusion-TracIn / ReTrac, where the parameter `--retrac` controls whether ReTrac or TracIn is performed. The implementations are located in `diffusion_tracin.py`. For example, to run ReTrac on TinyImagenet, run the following:
+```bash
 python3 main.py --dataset='zh-plus/tiny-imagenet' --gpu=2 --ckpt_dir='trained_models/tiny_imagenet' --task='train' --retrac --interval=20 --save_path='influence/tiny_imagenet/retrac'
 ```
 
+**3. Generation**
+
+The `generate.py` file provides code to generate images from trained model checkpoints. Example usage: 
+```bash
+python3 generate.py --gpu=0 --samples_dir="test_samples/gen" --resolution=128 --pretrained_model_path="path_to_ckpt" --eval_batch_size=32
+```
 ---
 
 ## Citation
