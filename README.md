@@ -51,9 +51,18 @@ under suitable folder.
 <a name="usage"></a>
 ### Usage
 
-## Model Training
+**Model Training** 
+
 To train a diffusion model and checkpoint also the timesteps and noise, please see `train.py`. For example, to train on the CifarMnist dataset, please run
 ```bash
 python3 train.py --gpu=2 --dataset='cifar_mnist' --learning_rate=0.0001 --num_epochs=2 --save_model_epoch=1 --train_batch_size=32 --resolution=32 --output_dir='trained_models/cifar_test' --samples_dir='trained_outputs/cifar_test' --loss_logs_dir="training_logs/cifar_test"
 ```
+
+**Diffusion-TracIn/ReTrac**
+
+The `main.py` file provides code to execute Diffusion-TracIn/ReTrac, where the parameter `--retrac` controls whether ReTrac or TracIn is performed. The main logic for the computation is located in `diffusion_tracin.py` For example, to run ReTrac on TinyImagenet
+```base
+python3 main.py --dataset='zh-plus/tiny-imagenet' --gpu=2 --ckpt_dir='trained_models/tiny_imagenet' --task='train' --retrac --interval=20 --save_path='influence/tiny_imagenet/retrac'
+```
+
 
