@@ -183,8 +183,10 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     main(args)
-    
-# python3 main.py --dataset='cifar_mnist' --gpu=0 --plot_norm --ckpt_dir='trained_models/adam_outlier_l1' --retrac --interval=100 --num_avg=100 --dist_path='test/adam_cifarmnist'
 
+'''
+Example usage:
+python3 main.py --gpu=0 --dataset='cifar_mnist' --plot_norm --ckpt_dir='trained_models/cifar_mnist' --retrac --interval=100 --num_avg=100 --dist_path='test/cifar_mnist'
+python3 main.py --gpu=0 --dataset='zh-plus/tiny-imagenet' --ckpt_dir='trained_models/tiny_imagenet' --task='train' --retrac --interval=20 --save_path='influence/tiny_imagenet/retrac'
 
-# python main.py --dataset='zh-plus/tiny-imagenet' --gpu=2 --ckpt_dir='trained_models/tiny_imagenet' --task='train' --retrac --interval=20 --save_path='influence/tiny_imagenet/retrac'
+'''
