@@ -41,6 +41,11 @@ we present diffusion-ReTrac with re-normalization technique to provide fair and 
 
 <a name="requirements"></a>
 ### Requirements
+All requirements for this project is included in the 'requirements.txt' file. Please run
+```bash
+pip install requirments.txt
+```
+under suitable folder.
 
 
 <a name="usage"></a>
