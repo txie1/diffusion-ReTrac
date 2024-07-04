@@ -1,4 +1,4 @@
-# Diffusion-ReTrac
+# Data Attribution for Diffusion Models: Timestep-induced Bias in Influence Estimation
 
 This is the official implementation of "_Data Attribution for Diffusion Models: Timestep-induced Bias in Influence Estimation_" (TMLR 2024)
 
@@ -40,29 +40,44 @@ we present diffusion-ReTrac with re-normalization technique to provide fair and 
 
 
 <a name="requirements"></a>
-### Requirements
-All requirements for this project is included in the 'requirements.txt' file. Please run
+## Setup
 ```bash
 pip install requirments.txt
 ```
-under suitable folder.
 
 
 <a name="usage"></a>
-### Usage
+## Usage
 
-**Model Training** 
+**1. Model Training** 
 
-To train a diffusion model and checkpoint also the timesteps and noise, please see `train.py`. For example, to train on the CifarMnist dataset, please run
+To train a diffusion model (and checkpoint the timesteps and noise for attribution), please see `train.py`.  For example, to train on the CIFAR-MNIST dataset, run the following:
+
 ```bash
-python3 train.py --gpu=2 --dataset='cifar_mnist' --learning_rate=0.0001 --num_epochs=2 --save_model_epoch=1 --train_batch_size=32 --resolution=32 --output_dir='trained_models/cifar_test' --samples_dir='trained_outputs/cifar_test' --loss_logs_dir="training_logs/cifar_test"
+python3 train.py --gpu=0 --dataset='cifar_mnist' --learning_rate=0.0001 --num_epochs=500 --save_model_epoch=50 --train_batch_size=32 --resolution=32 --output_dir='trained_models/cifar_mnist' --samples_dir='trained_outputs/cifar_mnist' --loss_logs_dir="training_logs/cifar_mnist"
 ```
 
-**Diffusion-TracIn/ReTrac**
+**2. Diffusion-TracIn / ReTrac**
 
-The `main.py` file provides code to execute Diffusion-TracIn/ReTrac, where the parameter `--retrac` controls whether ReTrac or TracIn is performed. The main logic for the computation is located in `diffusion_tracin.py` For example, to run ReTrac on TinyImagenet
+The `main.py` file provides code to run Diffusion-TracIn / ReTrac, where the parameter `--retrac` controls whether ReTrac or TracIn is performed. The implementations are located in `diffusion_tracin.py` For example, to run ReTrac on TinyImagenet, run the following:
 ```base
 python3 main.py --dataset='zh-plus/tiny-imagenet' --gpu=2 --ckpt_dir='trained_models/tiny_imagenet' --task='train' --retrac --interval=20 --save_path='influence/tiny_imagenet/retrac'
 ```
 
+---
+
+## Citation
+If you find this project useful, please consider citing our paper:
+
+```
+@misc{xie2024dataattributiondiffusionmodels,
+      title={Data Attribution for Diffusion Models: Timestep-induced Bias in Influence Estimation}, 
+      author={Tong Xie and Haoyu Li and Andrew Bai and Cho-Jui Hsieh},
+      year={2024},
+      eprint={2401.09031},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2401.09031}, 
+}
+```
 
