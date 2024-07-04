@@ -33,7 +33,11 @@ and arbitrariness in attribution results. We identify the **dominating norm effe
 influential samples to be the same across diverse test images (ie. generally influential). To address this,
 we present diffusion-ReTrac with re-normalization technique to provide fair and targeted attribution.
 
-<img src = “assets/tiny_imagenet.png” width = 600 height = 300>
+<p align="center">
+  <img width="900" alt="image" src="https://github.com/txie1/diffusion-ReTrac/blob/main/assets/cifar_mnist.png">
+</p>
+
+
 
 <a name="requirements"></a>
 ### Requirements
