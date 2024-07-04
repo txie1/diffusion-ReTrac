@@ -275,8 +275,7 @@ if __name__ == "__main__":
         )
 
     main(args)
-    
-# python3 train.py --gpu=0 --dataset='cifar10' --learning_rate=0.0001 --num_epochs=400 --save_model_epoch=10 --train_batch_size=32 --resolution=32 --output_dir='trained_models/artbench_test' --samples_dir='trained_outputs/artbench_test'
 
-# python3 train.py --gpu=2 --dataset='cifar_mnist' --learning_rate=0.0001 --num_epochs=2 --save_model_epoch=1 --train_batch_size=32 --resolution=32 --output_dir='trained_models/cifar_test' --samples_dir='trained_outputs/cifar_test' --loss_logs_dir="training_logs/cifar_test"
-# python3 train.py --dataset='artbench_64_subclass' --learning_rate=0.0001 --num_epochs=400 --save_model_epoch=20 --train_batch_size=32 --resolution=64 --output_dir='trained_models/artbench64' --samples_dir='trained_outputs/artbench64' --loss_logs_dir='training_logs/artbench64' --gpu=1
+
+# Example usage:
+# python3 train.py --gpu=0 --dataset='cifar10' --learning_rate=0.0001 --num_epochs=400 --save_model_epoch=50 --train_batch_size=32 --resolution=32 --output_dir='trained_models/cifar10' --samples_dir='trained_outputs/cifar10' --loss_logs_dir="training_logs/cifar10"
