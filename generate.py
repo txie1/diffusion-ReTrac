@@ -77,8 +77,12 @@ if __name__ == "__main__":
                         default=None,
                         help="Path to pretrained model")
     parser.add_argument("--gpu", type=int, default=-1)
-    parser.add_argument("--eval_batch_size", type=int, default=12)
+    parser.add_argument("--eval_batch_size", type=int, default=12, help="number of samples to generate)
 
     args = parser.parse_args()
 
     generate_samples(args)
+
+
+# Example usage:
+# python3 generate.py --gpu=0 --samples_dir="test_samples/gen" --resolution=128 --pretrained_model_path="path_to_ckpt" --eval_batch_size=32
