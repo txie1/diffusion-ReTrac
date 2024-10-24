@@ -90,14 +90,13 @@ python3 generate.py --gpu=0 --samples_dir="test_samples/gen" --resolution=128 --
 If you find this project useful, please consider citing our paper:
 
 ```
-@misc{xie2024dataattributiondiffusionmodels,
-      title={Data Attribution for Diffusion Models: Timestep-induced Bias in Influence Estimation}, 
-      author={Tong Xie and Haoyu Li and Andrew Bai and Cho-Jui Hsieh},
-      year={2024},
-      eprint={2401.09031},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2401.09031}, 
+@article{xie2024data,
+  title={Data Attribution for Diffusion Models: Timestep-induced Bias in Influence Estimation},
+  author={Tong Xie and Haoyu Li and Andrew Bai and Cho-Jui Hsieh},
+  journal={Transactions on Machine Learning Research},
+  issn={2835-8856},
+  year={2024},
+  url={https://openreview.net/forum?id=P3Lyun7CZs},
 }
 ```
 
